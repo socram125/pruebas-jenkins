@@ -38,8 +38,8 @@ pipeline {
         
         stage('email') {
             steps {
-                mail bcc: '', body: 'esto es una prueba', cc: '', from: '', replyTo: '', subject: 'jenkins', to: 'soc_126@outlook.com'
-                echo 'Aqui va la parte del email'
+                mail bcc: '', body: 'Todo el proceso de CI se ha completado con el estado de la compilacion ${BUILD_NUMBER} es ', cc: '', from: '', replyTo: '', subject: 'jenkins', to: 'soc_126@outlook.com'
+                echo 'Aqui va la parte del email ${currentBuild.result}'
             }
         }
         
