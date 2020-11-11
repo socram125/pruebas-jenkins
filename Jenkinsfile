@@ -38,7 +38,7 @@ pipeline {
         
         stage('email') {
             steps {
-                //mail bcc: '', body: 'esto es una prueba', cc: '', from: '', replyTo: '', subject: 'jenkins', to: 'soc_126@outlook.com'
+                mail bcc: '', body: 'esto es una prueba', cc: '', from: '', replyTo: '', subject: 'jenkins', to: 'soc_126@outlook.com'
                 echo 'Aqui va la parte del email'
             }
         }
